@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - STI Servicios Técnicos Industriales</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#quienes-somos">Quiénes Somos</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="index.html#por-que-sti">Por Qué STI</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sección de Contacto -->
+    <section class="contacto-section">
+        <div class="container">
+            <h1>Contacto</h1>
+            <p class="contacto-intro">¿Necesitas un servicio técnico? Contáctanos y te responderemos en la brevedad.</p>
+
+            <div class="contacto-content">
+                <!-- Información de contacto -->
+                <div class="contacto-info">
+                    <h2>Información de Contacto</h2>
+                    
+                    <div class="info-item">
+                        <h3>📞 Teléfono</h3>
+                        <p><a href="tel:+56912345678">+56 9 1234 5678</a></p>
+                        <p style="font-size: 0.9rem; color: var(--text-light);">Disponible de lunes a viernes, 9:00 - 18:00</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h3>📧 Correo Electrónico</h3>
+                        <p><a href="mailto:contacto@sti.cl">contacto@sti.cl</a></p>
+                        <p style="font-size: 0.9rem; color: var(--text-light);">Te responderemos en 24 horas</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h3>📍 Ubicación</h3>
+                        <p>Región de Atacama, Chile</p>
+                        <p style="font-size: 0.9rem; color: var(--text-light);">Disponible para servicios a nivel nacional</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h3>⏰ Horarios de Atención</h3>
+                        <p>Lunes - Viernes: 9:00 - 18:00</p>
+                        <p>Emergencias: Disponible 24/7</p>
+                    </div>
+                </div>
+
+                <!-- Formulario de contacto -->
+                <div class="contacto-form">
+                    <h2>Envíanos un Mensaje</h2>
+                    <form id="formulario-contacto">
+                        <div class="form-group">
+                            <label for="nombre">Nombre Completo *</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="empresa">Empresa *</label>
+                            <input type="text" id="empresa" name="empresa" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono">Teléfono de Contacto *</label>
+                            <input type="tel" id="telefono" name="telefono" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="servicio">Tipo de Servicio de Interés</label>
+                            <select id="servicio" name="servicio">
+                                <option value="">-- Selecciona un servicio --</option>
+                                <option value="compresores">Mantenimiento Compresores de Aire</option>
+                                <option value="botellas">Mantenimiento Llenadoras de Botella</option>
+                                <option value="gruas">Mantenimiento Grúas Horquillas</option>
+                                <option value="etiquetadoras">Mantenimiento Etiquetadoras Botellas</option>
+                                <option value="prensas">Mantenimiento Prensas</option>
+                                <option value="vendimia">Mantenimiento Equipos Vendimia</option>
+                                <option value="generadores">Mantenimiento Generadores Eléctricos</option>
+                                <option value="bombas">Mantenimiento Bombas</option>
+                                <option value="motores">Mantenimiento Motores Eléctricos</option>
+                                <option value="otro">Otro servicio</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje *</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox">
+                                <input type="checkbox" id="politicas" name="politicas" required>
+                                Acepto recibir información sobre nuestros servicios
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large">Enviar Mensaje</button>
+                        <p id="mensaje-respuesta" style="margin-top: 10px; display: none;"></p>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Mapa o sección adicional -->
+            <div class="contacto-extra" style="margin-top: 60px; padding-top: 40px; border-top: 2px solid var(--border-color);">
+                <h2>¿Por Qué Contactarnos?</h2>
+                <div class="ventajas-grid">
+                    <div class="ventaja-card">
+                        <h3>⚡ Respuesta Rápida</h3>
+                        <p>Te contactaremos en el menor tiempo posible para resolver tu consulta</p>
+                    </div>
+                    <div class="ventaja-card">
+                        <h3>🎯 Soluciones Personalizadas</h3>
+                        <p>Adaptamos nuestros servicios a las necesidades específicas de tu empresa</p>
+                    </div>
+                    <div class="ventaja-card">
+                        <h3>🔧 Equipo Especializado</h3>
+                        <p>Contamos con profesionales con amplia experiencia en mantenimiento industrial</p>
+                    </div>
+                    <div class="ventaja-card">
+                        <h3>💼 Disponibilidad 24/7</h3>
+                        <p>Disponibles para emergencias fuera de horario de atención regular</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 STI - Servicios Técnicos Industriales. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="contacto-script.js"></script>
+</body>
+</html>

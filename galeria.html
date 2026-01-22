@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - STI Servicios Técnicos Industriales</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#quienes-somos">Quiénes Somos</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="index.html#por-que-sti">Por Qué STI</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Galería -->
+    <section class="galeria-section">
+        <div class="container">
+            <div class="galeria-header">
+                <a href="index.html#servicios" class="btn btn-secondary">← Volver</a>
+                <h1 id="galeria-titulo">Galería de Trabajo</h1>
+                <p id="galeria-descripcion"></p>
+            </div>
+
+            <div class="galeria-grid" id="galeria-grid">
+                <!-- Las imágenes se cargarán dinámicamente aquí -->
+            </div>
+
+            <!-- Modal para ver imagen grande -->
+            <div id="modal" class="modal">
+                <span class="modal-close">&times;</span>
+                <img id="modal-image" src="" alt="Imagen ampliada">
+                <div class="modal-caption" id="modal-caption"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 STI - Servicios Técnicos Industriales. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="galeria-script.js"></script>
+</body>
+</html>
