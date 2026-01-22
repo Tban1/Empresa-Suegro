@@ -53,6 +53,38 @@ body {
     padding: 0 40px;
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
+}
+
+/* Menú Hamburguesa */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+    gap: 6px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
 }
 
 .nav-links {
@@ -368,14 +400,53 @@ section h2::after {
 /* Media Queries */
 @media (max-width: 768px) {
     .navbar .container {
-        flex-direction: column;
+        flex-direction: row;
         gap: 1rem;
+        padding: 0 20px;
+        justify-content: space-between;
+    }
+
+    .hamburger {
+        display: flex;
     }
 
     .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: linear-gradient(135deg, #1e5a96 0%, #2b7ac3 100%);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        padding: 0;
+    }
+
+    .nav-links.active {
+        max-height: 500px;
+        padding: 1rem 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 1rem 1.5rem;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links li:last-child a {
+        border-bottom: none;
+    }
+
+    .hero {
+        padding: 60px 20px;
+        min-height: 400px;
+    }
+
+    .hero-logo {
+        height: 180px;
     }
 
     .hero h2 {
@@ -402,26 +473,87 @@ section h2::after {
     section {
         padding: 40px 20px;
     }
+
+    .btn {
+        padding: 0.9rem 1.8rem;
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 480px) {
+    .navbar .container {
+        padding: 0 15px;
+    }
+
+    .hamburger span {
+        width: 22px;
+        height: 2.5px;
+    }
+
     .hero {
-        padding: 50px 20px;
-        min-height: 300px;
+        padding: 40px 20px;
+        min-height: 350px;
+    }
+
+    .hero-logo {
+        height: 140px;
+        margin-bottom: 1.5rem;
     }
 
     .hero h2 {
         font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .hero-description {
+        font-size: 0.85rem;
+        margin-bottom: 1.5rem;
     }
 
     .nav-links {
-        flex-direction: column;
-        gap: 0.5rem;
+        top: 100%;
+    }
+
+    .nav-links a {
+        padding: 0.8rem 1rem;
+        font-size: 0.85rem;
     }
 
     section h2 {
         font-size: 1.5rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+
+    .servicio-image {
+        height: 220px;
+    }
+
+    .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.85rem;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Formulario Contacto */
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+        font-size: 16px;
+    }
+
+    .contact-form button {
+        width: 100%;
     }
 }
 
